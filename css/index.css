@@ -38,6 +38,9 @@
 	background-color: #FFF;
 	box-shadow: 2px 0px 5px rgba(0,0,0,0.3);
 }
+.menu-box ul li .onblock {
+	display: block;
+}
 ul li .sub-menu .left-box {
 	float: left;
 	max-width: 700px;

@@ -12,7 +12,6 @@ dl, dt, dd {
     padding: 0px;
 }
 ul li, ol {
-	position: relative;
     list-style: none;
 }
 

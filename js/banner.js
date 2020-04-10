@@ -103,6 +103,7 @@ window.onload = function(){
 	//鼠标移入关闭定时器
 	banner.onmouseover = stop;
 	banner.onmouseout = play;
+	
 	//京东秒杀倒计时================================================================================
 	
 	var box = document.querySelector("#count-down"),
@@ -130,5 +131,36 @@ window.onload = function(){
 	setInterval(function(){
 		showTime()
 	},
-	1000)	
+	1000)
+		
+	//导航菜单切换===============================================================================
+	
+	var menuBox = document.querySelector("#menuBox"),
+		menuLi = menuBox.querySelectorAll("li"),
+		menu = menuBox.querySelectorAll(".sub-menu"),
+		len = menuLi.length;
+		
+		for(var i=0; i<len; i++){
+			
+			menuLi[i].onmousemove = function(){
+				var subMenu = this.querySelectorAll(".sub-menu")[0];
+				for(var i=0; i<len; i++){
+					menu[i].className = "sub-menu";
+				}
+				if(subMenu.className = "sub-menu"){
+					subMenu.className = "sub-menu onblock";
+				}
+			}
+			
+			menuLi[i].onmouseout = function(){				
+				for(var i=0; i<len; i++){
+					menu[i].className = "sub-menu";
+				}
+			}		
+							
+		}
+		
+		
+		
+		
 }
